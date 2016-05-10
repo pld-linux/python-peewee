@@ -14,6 +14,9 @@ Source0:	https://pypi.python.org/packages/source/p/%{module}/%{module}-%{version
 URL:		http://github.com/coleifer/peewee/
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
+%if %{with tests}
+BuildRequires:	python-modules-sqlite
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
